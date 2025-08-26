@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+.ipynb_checkpoints
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Env variables
+service_principal_secrets.json
+set_secrets.ps1
+.env
+
+terraform/dev.tfvars
+terraform/dev.tfplan
+terraform/terraform.tfstate*
+terraform/.terraform.lock.hcl
+terraform/.terraform
+
+notebooks

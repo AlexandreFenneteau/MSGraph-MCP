@@ -1,0 +1,16 @@
+[project]
+name = "mgp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-identity>=1.24.0",
+    "httpx>=0.28.1",
+    "markdownify>=1.2.0",
+    "mcp[cli]>=1.13.0",
+    "msgraph-sdk>=1.40.0",
+    "notebook>=7.4.5",
+    "pydantic-settings>=2.10.1",
+    "tzdata>=2025.2",
+]
