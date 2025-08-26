@@ -1,14 +1,7 @@
 from azure.identity import DeviceCodeCredential, InteractiveBrowserCredential
 from msgraph import GraphServiceClient
-import sys
-from pathlib import Path
 
-# Add the src directory to Python path to enable absolute imports
-src_path = Path(__file__).parent.parent.parent
-if str(src_path) not in sys.path:
-    sys.path.insert(0, str(src_path))
-
-from msgraph_mcp.config import APP_AUTH_SETTINGS
+from ..config import APP_AUTH_SETTINGS
 
 __CREDENTIALS = InteractiveBrowserCredential(
     client_id=APP_AUTH_SETTINGS.client_id,

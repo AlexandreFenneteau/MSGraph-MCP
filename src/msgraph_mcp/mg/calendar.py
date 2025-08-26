@@ -1,15 +1,8 @@
 from datetime import datetime
-import sys
-from pathlib import Path
 
-# Add the src directory to Python path to enable absolute imports
-src_path = Path(__file__).parent.parent.parent
-if str(src_path) not in sys.path:
-    sys.path.insert(0, str(src_path))
-
-from msgraph_mcp.utils import format_msgraph_date, format_msgraph_datetime
-from msgraph_mcp.mg.client import GRAPH_CLIENT
-from msgraph_mcp.models import CalEvent
+from ..utils import format_msgraph_date, format_msgraph_datetime
+from .client import GRAPH_CLIENT
+from ..models import CalEvent
 
 async def get_events(start_year: int, start_month: int, start_day: int,
                      end_year: int, end_month: int, end_day: int) -> list[CalEvent]:

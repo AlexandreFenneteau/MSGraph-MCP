@@ -1,13 +1,6 @@
 from datetime import datetime, timedelta
 from msgraph.generated.models.date_time_time_zone import DateTimeTimeZone
 from zoneinfo import ZoneInfo
-import sys
-from pathlib import Path
-
-# Add the src directory to Python path to enable absolute imports
-src_path = Path(__file__).parent.parent
-if str(src_path) not in sys.path:
-    sys.path.insert(0, str(src_path))
 
 from msgraph_mcp.config import DATE_TIME_SETTINGS
 
