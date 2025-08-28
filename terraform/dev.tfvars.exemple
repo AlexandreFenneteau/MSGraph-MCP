@@ -1,0 +1,2 @@
+azure_aad_application_owner_object_id = "XXXXXXXXXXXXXXXXXXX" # principal id de votre utilisateur Azure
+tenant_id                             = "XXXXXXXXXXXXXXXXXXX" # tenant de votre organisation

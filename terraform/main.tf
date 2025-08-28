@@ -22,18 +22,7 @@ provider "azuread" {
   tenant_id = var.tenant_id
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = var.rg_name
-  location = var.location
-}
-
-
 output "tenant_id" {
   sensitive = false
   value     = var.tenant_id
-}
-
-output "ressource_group" {
-  sensitive = false
-  value     = var.rg_name
 }

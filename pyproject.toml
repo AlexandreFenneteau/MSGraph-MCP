@@ -1,7 +1,7 @@
 [project]
 name = "mgp"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP server for Microsoft Graph integration with email and calendar access"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

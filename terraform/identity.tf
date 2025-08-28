@@ -9,6 +9,12 @@ resource "azuread_application" "afen-mgp" {
     display_name = "application-secret"
   }
 
+  public_client {
+    redirect_uris = [
+      "http://localhost",
+    ]
+  }
+
   required_resource_access {
     resource_app_id = "00000003-0000-0000-c000-000000000000" # Microsoft Graph
     resource_access {

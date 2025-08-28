@@ -10,13 +10,13 @@ TIMEZONE = ZoneInfo(DATE_TIME_SETTINGS.timezone)
 
 def format_msgraph_datetime(msgraph_datetime: DateTimeTimeZone) -> str:
     assert msgraph_datetime.time_zone == 'UTC'
-    dt = datetime.fromisoformat(msgraph_datetime.date_time + 'Z') # Add the Z allows the datimetime to take the date as UTC + 00
+    dt = datetime.fromisoformat(msgraph_datetime.date_time + 'Z') # Add the Z to allow datetime to parse the date as UTC + 00
     return dt.astimezone(TIMEZONE)
 
 
 def format_msgraph_date(msgraph_datetime: DateTimeTimeZone) -> str:
     assert msgraph_datetime.time_zone == 'UTC'
-    dt = datetime.fromisoformat(msgraph_datetime.date_time + 'Z') # Add the Z allows the datimetime to take the date as UTC + 00
+    dt = datetime.fromisoformat(msgraph_datetime.date_time + 'Z') # Add the Z to allow datetime to parse the date as UTC + 00
     return dt
 
 def get_now_dt() -> datetime:
@@ -30,7 +30,7 @@ def get_local_datetime_str() -> str:
 
 
 def get_next_day(weekday: int) -> datetime:
-    """Weekday: 0 -> moday, 6 Sunday"""
+    """Weekday: 0 -> monday, 6 -> sunday"""
     now = get_now_dt()
     days_difference = 7 - ((now.weekday() - weekday) % 7 )
     next_day_date = now.date() + timedelta(days=days_difference)
